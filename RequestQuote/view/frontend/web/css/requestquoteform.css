@@ -1,0 +1,20 @@
+.request-quote-container {
+    max-width: 32%;
+    margin: 0 auto;
+}
+.request-quote-container h1 {
+    margin: 20px 0;
+}
+.request-quote-container p.info-text {
+    margin-bottom: 20px !important;
+    text-align: center;
+}
+
+.request-quote-container .actions-toolbar .primary button {
+    background: red;
+}
+
+.request-quote-container .actions-toolbar .primary button.action.primary {
+    border: 1px solid;
+    border-radius: 6px 6px 6px 6px;
+}

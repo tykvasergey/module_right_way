@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="BroSolutions_RequestQuote::requestquote" resource="BroSolutions_RequestQuote::requestquote" title="Quote requests" action="requestquote/requestquote/index" module="BroSolutions_RequestQuote" sortOrder="20" parent="Magento_Customer::customer" />
+    </menu>
+</config>

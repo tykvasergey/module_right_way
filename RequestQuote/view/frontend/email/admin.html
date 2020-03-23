@@ -1,0 +1,10 @@
+<!--@subject {{var data.subject}} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<h2>Powder Coating RFQ</h2>
+<table class="message-details" style="font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;">
+    {{block class='Magento\\Framework\\View\\Element\\Template' area='frontend' template='BroSolutions_RequestQuote::email/info.phtml' items_data=$data}}
+</table>
+
+{{template config_path="design/email/footer_template"}}

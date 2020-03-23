@@ -1,0 +1,13 @@
+<?php
+$data = $block->getData('items_data');
+foreach($data as $key => $value): ?>
+    <?php if(in_array($key, ['subject', 'btnSubmit', 'form_key'])){continue;}?>
+    <tr>
+        <td><strong><?php echo ucwords(str_replace("_", " ", $key)); ?></strong></td>
+        <?php if($key == 'presentations'): ?>
+        <td><?php echo $this->helper('BroSolutions\RequestQuote\Helper\Data')->formatPresentations($value); ?></td>
+        <?php else: ?>
+        <td><?php echo $value; ?></td>
+        <?php endif; ?>
+    </tr>
+<?php endforeach; ?>

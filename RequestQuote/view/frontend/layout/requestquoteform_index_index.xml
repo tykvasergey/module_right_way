@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="BroSolutions_RequestQuote::css/requestquoteform.css"/>
+    </head>
+    <referenceContainer name="content">
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceBlock name="catalog.topnav" remove="true" />
+        <referenceBlock name="wood.bottom" remove="true" />
+        <block class="BroSolutions\RequestQuote\Block\RequestQuoteForm"
+               name="requestquoteform.block" as="requestquoteform.block"
+               template="BroSolutions_RequestQuote::form.phtml"/>
+    </referenceContainer>
+</page>

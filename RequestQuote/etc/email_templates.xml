@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="requestquote_request_quote_customer_template_id" label="Request quote customer email template" file="customer.html" type="html" module="BroSolutions_RequestQuote" area="frontend"/>
+    <template id="request_quote_admin_template_id" label="Request quote admin email template" file="admin.html" type="html" module="BroSolutions_RequestQuote" area="frontend"/>
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <requestquote>
+            <request_quote>
+                <enabled>1</enabled>
+                <email_subject>Request quote form</email_subject>
+                <from_email>no-reply@ccisinc.com</from_email>
+                <from_name>CCIS, Inc</from_name>
+                <to_email>kate.brown@ccisinc.com</to_email>
+                <template_id>requestquote_request_quote_customer_template_id</template_id>
+                <admin_template_id>request_quote_admin_template_id</admin_template_id>
+            </request_quote>
+        </requestquote>
+    </default>
+</config>

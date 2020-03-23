@@ -1,0 +1,187 @@
+<?php
+
+
+?>
+<div class="request-quote-container">
+    <h1>Request a Quote</h1>
+    <p class="info-text">You need a factory authorized distributor with over 40 years experience and 30 employees. We'll get back to you quickly with a price on the best equipment and support in the southeast.</p>
+
+    <div id="request-quote-form">
+        <form class="form"
+              action="<?= $block->escapeUrl($block->getFormAction()) ?>"
+              id="contact-form"
+              method="post"
+              data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+              data-mage-init='{"validation":{}}'>
+
+            <fieldset class="fieldset">
+                <div class="field full_name required">
+                    <label class="label" for="full_name"><span><?= $block->escapeHtml(__('Full name')) ?></span></label>
+                    <div class="control">
+                        <input name="full_name"
+                               id="full_name"
+                               title="<?= $block->escapeHtmlAttr(__('Full name')) ?>"
+                               value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('Full name')) ?>"
+                               class="input-text required-entry"
+                               type="text"
+                               data-validate="{'validate-no-html-tags':true}"
+                               placeholder="Enter your full name"/>
+                    </div>
+                </div>
+                <div class="field email required">
+                    <label class="label" for="email"><span><?= $block->escapeHtml(__('Your Email Address')) ?></span></label>
+                    <div class="control">
+                        <input name="email"
+                               id="email"
+                               title="<?= $block->escapeHtmlAttr(__('Your Email Address')) ?>"
+                               value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('email') ?:
+                                   $this->helper('Magento\Contact\Helper\Data')->getUserEmail()) ?>"
+                               class="input-text required-entry"
+                               type="email"
+                               placeholder="Enter your Your Email"
+                               data-validate="{required:true, 'validate-email':true}"/>
+                    </div>
+                </div>
+                <div class="field zipcode required">
+                    <label class="label" for="zipcode"><span><?= $block->escapeHtml(__('Zip code')) ?></span></label>
+                    <div class="control">
+                        <input name="zipcode"
+                               id="zipcode"
+                               title="<?= $block->escapeHtmlAttr(__('Zip code')) ?>"
+                               value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('Zip code')) ?>"
+                               class="input-text required-entry"
+                               type="text"
+                               data-validate="{'validate-no-html-tags':true}"
+                               placeholder="Enter your Zip code"/>
+                    </div>
+                </div>
+                <div class="field phone required">
+                    <label class="label" for="phone"><span><?= $block->escapeHtml(__('Phone')) ?></span></label>
+                    <div class="control">
+                        <input name="phone"
+                               id="phone"
+                               title="<?= $block->escapeHtmlAttr(__('Phone')) ?>"
+                               value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('Phone')) ?>"
+                               class="input-text required-entry"
+                               type="text"
+                               data-validate="{'validate-no-html-tags':true}"
+                               placeholder="Enter your Phone"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="budget"><span><?= $block->escapeHtml(__('Budget')) ?></span></label>
+                    <div class="control">
+                        <input name="budget"
+                               id="budget"
+                               title="<?= $block->escapeHtmlAttr(__('Budget')) ?>"
+                               value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('Budget')) ?>"
+                               class="input-text"
+                               type="text"
+                               data-validate="{'validate-no-html-tags':true}"
+                               placeholder="Enter your budget"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="part_size"><span><?= $block->escapeHtml(__('Part size')) ?></span></label>
+                    <div class="control">
+                        <input name="part_size"
+                               id="part_size"
+                               title="<?= $block->escapeHtmlAttr(__('Part size')) ?>"
+                               value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('Part size')) ?>"
+                               class="input-text"
+                               type="text"
+                               data-validate="{'validate-no-html-tags':true}"
+                               placeholder="Enter your part size"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="existing_line" class="label"><span><?= $block->escapeHtml(__('Existing line')) ?></span></label>
+                    <div class="control">
+                        <select name="existing_line"
+                                id="existing_line">
+                            <option value="">Please select</option>
+                            <?php foreach ($block->getYesno() as $key => $value): ?>
+                                <option value="<?= $key; ?>"><?= $value; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="product_to_be_coated"><span><?= $block->escapeHtml(__('Product to be coated')) ?></span></label>
+                    <div class="control">
+                        <input name="product_to_be_coated"
+                               id="product_to_be_coated"
+                               title="<?= $block->escapeHtmlAttr(__('Product to be coated')) ?>"
+                               value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('Product to be coated')) ?>"
+                               class="input-text"
+                               type="text"
+                               data-validate="{'validate-no-html-tags':true}"
+                               placeholder="Enter product to be coated"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="installation" class="label"><span><?= $block->escapeHtml(__('Installation')) ?></span></label>
+                    <div class="control">
+                        <select name="installation"
+                                id="installation">
+                            <option value="">Please select</option>
+                            <?php foreach ($block->getInstallationOptions() as $key => $value): ?>
+                                <option value="<?= $key; ?>"><?= $value; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <legend class="legend"><span>Options:</span></legend><br>
+                <?php foreach ($block->getCheckMarkOptions() as $key => $option): ?>
+                    <div class="field">
+                        <div class="control">
+                            <input class=""
+                                   name="check_mark_options[<?= $key; ?>]"
+                                   type="checkbox"
+                                   value="<?= $key; ?>"
+                                   id="check_mark_options_<?= $key; ?>"
+                                   title="<?= $option; ?>"
+                            />
+                            <label class="label" for="check_mark_options_<?= $key; ?>"><span><?= $block->escapeHtml(__($option)) ?></span></label>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+                <div class="field">
+                    <div class="control">
+                        <label class="label" for="interested_financing"><span><?= $block->escapeHtml(__('Interested in Financing')) ?></span></label>
+                        <input class=""
+                               name="interested_financing"
+                               type="checkbox"
+                               value="1"
+                               id="interested_financing"
+                               title="Interested in Financing"
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="comments"><span><?= $block->escapeHtml(__('Comments')) ?></span></label>
+                    <div class="input-box">
+                        <textarea id="comments"
+                                  name="comments"
+                                  rows="3"
+                                  cols="5"
+                                  data-validate="{'validate-no-html-tags':true}">
+
+                        </textarea>
+                        <div class="note"><?= $block->escapeHtml(__('Please enter your message here')) ?></div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button type="submit" title="<?= $block->escapeHtmlAttr(__('GET YOUR QUOTE')) ?>" class="action submit primary">
+                        <span><?= $block->escapeHtml(__('GET YOUR QUOTE')) ?></span>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
