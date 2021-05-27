@@ -9,7 +9,7 @@ use Magento\Framework\ObjectManagerInterface;
  * @package BroSolutions\RequestQuote\Setup
  */
 class InstallData implements \Magento\Framework\Setup\InstallDataInterface
-{ 
+{
 
     /**
      * @var ResourceConnection
